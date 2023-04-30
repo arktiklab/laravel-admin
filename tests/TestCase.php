@@ -16,7 +16,7 @@ class TestCase extends Orchestra
         Factory::guessFactoryNamesUsing(
             fn (string $modelName) => 'Arktiklab\\LaravelAdmin\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
-        Route::arktikadmin();
+        Route::arktikadmin(fn () => Route::get('/test', fn () => 'working'));
     }
 
     protected function getPackageProviders($app)

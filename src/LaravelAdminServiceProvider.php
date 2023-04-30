@@ -29,17 +29,16 @@ class LaravelAdminServiceProvider extends PackageServiceProvider
     public function bootingPackage()
     {
         $prefix = config('arktik-admin.path');
-        Route::macro('arktikadmin', function (callable|null $callback = null) use ($prefix) {
+        Route::prefix($prefix)
+            ->middleware(['web'])
+            ->group(function () {
+                Route::get('/', LoginController::class);
+                Route::middleware('auth')
+                    ->get('logout', LogoutController::class);
+            });
+        Route::macro('arktikadmin', function (callable $callback) use ($prefix) {
             Route::prefix($prefix)
-                ->middleware(['web'])
-                ->group(function () use ($callback) {
-                    Route::get('/', LoginController::class);
-                    Route::middleware('auth')
-                        ->get('logout', LogoutController::class);
-                    if (! is_null($callback) && is_callable($callback)) {
-                        $callback();
-                    }
-                });
+                ->group($callback(...));
         });
     }
 }
