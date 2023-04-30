@@ -2,9 +2,9 @@
 
 namespace Arktiklab\LaravelAdmin\Tests;
 
+use Arktiklab\LaravelAdmin\LaravelAdminServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Arktiklab\LaravelAdmin\LaravelAdminServiceProvider;
 
 class TestCase extends Orchestra
 {

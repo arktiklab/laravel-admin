@@ -2,9 +2,9 @@
 
 namespace Arktiklab\LaravelAdmin;
 
+use Arktiklab\LaravelAdmin\Commands\LaravelAdminCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Arktiklab\LaravelAdmin\Commands\LaravelAdminCommand;
 
 class LaravelAdminServiceProvider extends PackageServiceProvider
 {
