@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "arktiklab/laravel-admin",
+    "description": "This is my package laravel-admin",
     "keywords": [
-        ":vendor_name",
+        "arktiklab",
         "laravel",
-        ":package_slug"
+        "laravel-admin"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/arktiklab/laravel-admin",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Faisal Ahmed",
+            "email": "foysal20x@gmail.com",
             "role": "Developer"
         }
     ],
@@ -30,18 +30,17 @@
         "pestphp/pest-plugin-laravel": "^2.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
+        "phpstan/phpstan-phpunit": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Arktiklab\\LaravelAdmin\\": "src/",
+            "Arktiklab\\LaravelAdmin\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Arktiklab\\LaravelAdmin\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -61,10 +60,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Arktiklab\\LaravelAdmin\\LaravelAdminServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelAdmin": "Arktiklab\\LaravelAdmin\\Facades\\LaravelAdmin"
             }
         }
     },

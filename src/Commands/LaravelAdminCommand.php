@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Arktiklab\LaravelAdmin\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelAdminCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-admin';
 
     public $description = 'My command';
 
