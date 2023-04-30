@@ -2,11 +2,12 @@
 
 namespace Arktiklab\LaravelAdmin;
 
+use Arktiklab\LaravelAdmin\Commands\LaravelAdminCommand;
+use Arktiklab\LaravelAdmin\Http\Controllers\LoginController;
+use Arktiklab\LaravelAdmin\Http\Controllers\LogoutController;
 use Illuminate\Support\Facades\Route;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Arktiklab\LaravelAdmin\Commands\LaravelAdminCommand;
-use Arktiklab\LaravelAdmin\Http\Controllers\{LoginController, LogoutController};
 
 class LaravelAdminServiceProvider extends PackageServiceProvider
 {
@@ -35,7 +36,7 @@ class LaravelAdminServiceProvider extends PackageServiceProvider
                     Route::get('/', LoginController::class);
                     Route::middleware('auth')
                         ->get('logout', LogoutController::class);
-                    if (!is_null($callback) && is_callable($callback)) {
+                    if (! is_null($callback) && is_callable($callback)) {
                         $callback();
                     }
                 });

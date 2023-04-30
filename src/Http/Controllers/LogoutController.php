@@ -11,6 +11,7 @@ class LogoutController extends Controller
     public function __invoke()
     {
         Auth::logout();
+
         return Redirect::to(config('arktik-admin.path'));
     }
 }

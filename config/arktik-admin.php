@@ -2,5 +2,5 @@
 
 // config for Arktiklab/LaravelAdmin
 return [
-    'path' => '~cp'
+    'path' => '~cp',
 ];
