@@ -6,7 +6,7 @@ use Arktiklab\LaravelAdmin\Menu\MenuRegistry;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static slot(string $id):\Arktiklab\LaravelAdmin\Menu\MenuSlot
+ * @method static \Arktiklab\LaravelAdmin\Menu\MenuSlot slot(string $id)
  */
 class Menu extends Facade
 {
