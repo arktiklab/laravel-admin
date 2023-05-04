@@ -5,6 +5,7 @@ namespace Arktiklab\LaravelAdmin;
 use Arktiklab\LaravelAdmin\Commands\LaravelAdminCommand;
 use Arktiklab\LaravelAdmin\Http\Controllers\LoginController;
 use Arktiklab\LaravelAdmin\Http\Controllers\LogoutController;
+use Arktiklab\LaravelAdmin\Menu\Defaults\SidebarMenu;
 use Illuminate\Support\Facades\Route;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -40,5 +41,15 @@ class LaravelAdminServiceProvider extends PackageServiceProvider
             Route::prefix($prefix)
                 ->group($callback(...));
         });
+    }
+
+    public function packageBooted()
+    {
+        $this->registerMenuBuilder();
+    }
+
+    protected function registerMenuBuilder()
+    {
+        SidebarMenu::make();
     }
 }
