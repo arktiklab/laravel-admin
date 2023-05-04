@@ -16,7 +16,7 @@ final class SidebarMenu
     protected function makeTopLevel(): self
     {
         $slot = Menu::slot('sidebar');
-        $slot->addItem(fn(MenuLink $item) => $item
+        $slot->addItem(fn (MenuLink $item) => $item
             ->id('admin.index')
             ->name('Dashboard')
             ->route('admin.index')
