@@ -1,0 +1,10 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Your additional CSS rules */
+.text-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

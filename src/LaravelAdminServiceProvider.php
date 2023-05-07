@@ -22,7 +22,8 @@ class LaravelAdminServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-admin')
             ->hasConfigFile('arktik-admin')
-//            ->hasViews()
+            ->hasViews('arktik-admin')
+            ->hasAssets()
 //            ->hasMigration('create_laravel-admin_table')
             ->hasCommand(LaravelAdminCommand::class);
     }
@@ -33,14 +34,17 @@ class LaravelAdminServiceProvider extends PackageServiceProvider
         Route::prefix($prefix)
             ->middleware(['web'])
             ->group(function () {
-                Route::get('/', LoginController::class);
+                Route::get('/login', LoginController::class);
                 Route::middleware('auth')
                     ->get('logout', LogoutController::class);
+
+                Route::get('/', fn() => view('arktik-admin::Home'));
             });
         Route::macro('arktikadmin', function (callable $callback) use ($prefix) {
             Route::prefix($prefix)
                 ->group($callback(...));
         });
+
     }
 
     public function packageBooted()
