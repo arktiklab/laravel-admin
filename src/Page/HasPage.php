@@ -14,10 +14,11 @@ trait HasPage
         /**
          * @var PageRoute $page
          */
-        $page = $this->pages->first(fn(PageRoute $page) => $page->uri === $uri);
+        $page = $this->pages->first(fn (PageRoute $page) => $page->uri === $uri);
 
-        if($page) {
+        if ($page) {
             $page->view->name($pageView->getName())->with($pageView->data->toArray());
+
             return $page;
         }
 
