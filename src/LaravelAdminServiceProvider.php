@@ -38,7 +38,7 @@ class LaravelAdminServiceProvider extends PackageServiceProvider
                 Route::middleware('auth')
                     ->get('logout', LogoutController::class);
 
-                Route::get('/', fn() => view('arktik-admin::Home'));
+                Route::get('/', fn () => view('arktik-admin::Home'));
             });
         Route::macro('arktikadmin', function (callable $callback) use ($prefix) {
             Route::prefix($prefix)
