@@ -7,7 +7,7 @@
 
     <title>Arktik - Admin</title>
 
-<link rel="stylesheet" href="{{asset('vendor/arktiklab/laravel-admin/dist/arktik-admin.app.css')}}" />
+<link rel="stylesheet" href="{{asset('vendor/arktik-admin/arktik-admin.app.css')}}" />
 </head>
 <body class="font-sans antialiased">
     <div>

@@ -3,6 +3,6 @@ module.exports = {
     theme: {
         extend: {},
     },
-    content: [ "*" ]
+    content: [ "./resources/views/**/*.blade.php" ]
 }
 

@@ -20,7 +20,7 @@ class LaravelAdminServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-admin')
+            ->name('laravel-arktik-admin')
             ->hasConfigFile('arktik-admin')
             ->hasViews('arktik-admin')
             ->hasAssets()
