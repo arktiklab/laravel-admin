@@ -2,15 +2,15 @@
 
 namespace Arktiklab\LaravelAdmin;
 
-use Illuminate\Support\Facades\Route;
-use Spatie\LaravelPackageTools\Package;
-use Arktiklab\LaravelAdmin\components\Topbar;
-use Arktiklab\LaravelAdmin\components\Menubar;
-use Arktiklab\LaravelAdmin\Menu\Defaults\SidebarMenu;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Arktiklab\LaravelAdmin\Commands\LaravelAdminCommand;
+use Arktiklab\LaravelAdmin\components\Menubar;
+use Arktiklab\LaravelAdmin\components\Topbar;
 use Arktiklab\LaravelAdmin\Http\Controllers\LoginController;
 use Arktiklab\LaravelAdmin\Http\Controllers\LogoutController;
+use Arktiklab\LaravelAdmin\Menu\Defaults\SidebarMenu;
+use Illuminate\Support\Facades\Route;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class LaravelAdminServiceProvider extends PackageServiceProvider
 {
@@ -28,7 +28,7 @@ class LaravelAdminServiceProvider extends PackageServiceProvider
             ->hasAssets()
 //            ->hasMigration('create_laravel-admin_table')
             ->hasCommand(LaravelAdminCommand::class)
-            ->hasViewComponents('arktik',  Menubar::class, Topbar::class);
+            ->hasViewComponents('arktik', Menubar::class, Topbar::class);
     }
 
     public function bootingPackage(): void
@@ -42,11 +42,11 @@ class LaravelAdminServiceProvider extends PackageServiceProvider
                     ->get('logout', LogoutController::class);
 
                 $navList = [
-                    "dashboard" => new NavMenu('Dashboard', 'home'),
-                    "team" => new NavMenu('Team', 'user'),
-                    "projects" => new NavMenu('Projects', 'folder'),
-                    "calender" => new NavMenu('Calender', 'calendar'),
-                    "documents" => new NavMenu('Documents', 'document'),
+                    'dashboard' => new NavMenu('Dashboard', 'home'),
+                    'team' => new NavMenu('Team', 'user'),
+                    'projects' => new NavMenu('Projects', 'folder'),
+                    'calender' => new NavMenu('Calender', 'calendar'),
+                    'documents' => new NavMenu('Documents', 'document'),
                 ];
                 Route::get('/', fn () => view('arktik-admin::Home', ['navMenu' => $navList]));
             });
