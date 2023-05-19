@@ -2,9 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .btn-primary {
-        @apply py-2 font-bold;
-    }
-}
-
