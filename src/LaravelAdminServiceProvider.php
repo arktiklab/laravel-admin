@@ -3,8 +3,8 @@
 namespace Arktiklab\LaravelAdmin;
 
 use Arktiklab\LaravelAdmin\Commands\LaravelAdminCommand;
-use Arktiklab\LaravelAdmin\components\Menubar;
-use Arktiklab\LaravelAdmin\components\Topbar;
+use Arktiklab\LaravelAdmin\Components\Menubar;
+use Arktiklab\LaravelAdmin\Components\Topbar;
 use Arktiklab\LaravelAdmin\Http\Controllers\LoginController;
 use Arktiklab\LaravelAdmin\Http\Controllers\LogoutController;
 use Arktiklab\LaravelAdmin\Menu\Defaults\SidebarMenu;
