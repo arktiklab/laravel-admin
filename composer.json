@@ -64,12 +64,7 @@
             ],
             "aliases": {
                 "LaravelAdmin": "Arktiklab\\LaravelAdmin\\Facades\\LaravelAdmin"
-            },
-            "assets": [
-                {
-                    "source": "Arktiklab\\LaravelAdmin\\LaravelAdminServiceProvider"
-                }
-            ]
+            }
         }
     },
     "minimum-stability": "dev",
