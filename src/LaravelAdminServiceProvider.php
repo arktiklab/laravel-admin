@@ -24,6 +24,7 @@ class LaravelAdminServiceProvider extends PackageServiceProvider
             ->name('laravel-admin')
             ->hasConfigFile('arktik-admin')
             ->hasViews()
+            ->hasAssets()
 //            ->hasMigration('create_laravel-admin_table')
             ->hasCommand(LaravelAdminCommand::class);
     }
