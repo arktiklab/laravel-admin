@@ -57,10 +57,11 @@ class LaravelAdminServiceProvider extends PackageServiceProvider
 
     private function setupInertia()
     {
-        Inertia::version(function(){
+        Inertia::version(function () {
             if (config('app.env') == 'testing') {
                 return;
             }
+
             return md5_file(public_path('vendor/laravel-admin/manifest.json'));
         });
 
