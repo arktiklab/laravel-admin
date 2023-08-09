@@ -63,9 +63,9 @@ class LaravelAdminServiceProvider extends PackageServiceProvider
                 return;
             }
 
-            return md5_file(public_path('vendor/laravel-admin/manifest.json'));
+            return md5_file(public_path('vendor/admin/manifest.json'));
         });
 
-        Inertia::setRootView('laravel-admin::layout.app');
+        Inertia::setRootView('admin::layout.app');
     }
 }
