@@ -43,7 +43,7 @@ final class MenuSection extends MenuSlot
         return $this;
     }
 
-    public function renderIcon(?string $attr = null): string
+    public function renderIcon(string $attr = null): string
     {
         return '';
     }
