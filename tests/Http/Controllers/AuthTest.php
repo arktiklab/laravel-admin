@@ -3,4 +3,4 @@
 it('will verify login route')
     ->get('/~cp')
     ->assertOk()
-    ->assertSee('ok');
+    ->assertContent('<h1 class="bg-red-200">Login</h1>');
