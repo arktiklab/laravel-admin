@@ -10,8 +10,8 @@ final class MenuLink implements MenuItemContract
     public static function make(string $name,
         string $id,
         string $route,
-        ?string $icon = null,
-        ?string $permission = null
+        string $icon = null,
+        string $permission = null
     ): MenuLink {
         return new self(
             $name,
